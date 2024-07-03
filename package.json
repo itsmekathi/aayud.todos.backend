@@ -1,0 +1,34 @@
+{
+  "name": "aayud.todos.backend",
+  "version": "1.0.0",
+  "description": "Aaayud todos application backend layer",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsmekathi/aayud.todos.backend.git"
+  },
+  "keywords": [
+    "todos",
+    "backend",
+    "nodejs",
+    "express",
+    "mongoose"
+  ],
+  "author": "Kathiravan.B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsmekathi/aayud.todos.backend/issues"
+  },
+  "homepage": "https://github.com/itsmekathi/aayud.todos.backend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4"
+  }
+}
