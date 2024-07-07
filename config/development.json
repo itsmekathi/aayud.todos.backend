@@ -2,5 +2,6 @@
     "name": "Aayud-todos(development)",
     "mail": {
         "host": "dev-mail-server"
-    }
+    },
+    "connectionString": "mongodb://127.0.0.1/aayud-todos"
 }

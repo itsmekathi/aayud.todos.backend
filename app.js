@@ -2,6 +2,11 @@ const config = require('config');
 const morgan = require('morgan');
 const helmet = require('helmet');
 var cors = require('cors')
+const mongoose = require('mongoose');
+
+mongoose.connect(config.get('connectionString'))
+    .then(() => console.log('connected to mongodb'))
+    .catch((err) => console.error('Error connecting to mongodb', err));
 
 const todos = require('./routes/todos');
 const home = require('./routes/home');
