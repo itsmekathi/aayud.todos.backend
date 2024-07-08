@@ -38,7 +38,7 @@ mongoose.connect(config.get('connectionString'))
     .then(() => console.log('connected to mongodb'))
     .catch((err) => console.error('Error connecting to mongodb', err));
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
