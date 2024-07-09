@@ -21,7 +21,7 @@ router.put('/:id', async (req, res) => {
         console.log(error);
         return res.sendStatus(400);
     }
-    let todo = await Todo.findByIdAndUpdate(req.params.id, { name: req.body.name }, { new: true });
+    let todo = await Todo.findByIdAndUpdate(req.params.id, { title: req.body.name, description: req.body.description }, { new: true });
     if (!todo) {
         return res.status(404).send('The item with the given id was not found');
     }
@@ -35,7 +35,8 @@ router.post('/', async (req, res) => {
         return res.status(400).send(''.concat(error.details.map(ed => ed.message)));
     }
     let todo = new Todo({
-        name: req.body.name
+        title: req.body.name,
+        description: req.body.description
     });
     todo = await todo.save()
     res.send(todo);
