@@ -18,7 +18,7 @@ const Todo = mongoose.model('Todo', new mongoose.Schema({
 
 function validateTodo(todo) {
     const todoSchema = Joi.object({
-        name: Joi.string().min(5).max(50).required(),
+        title: Joi.string().min(5).max(50).required(),
         description: Joi.string().min(5).max(200).required()
     });
     return todoSchema.validate(todo);
