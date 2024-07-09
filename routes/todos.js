@@ -21,7 +21,7 @@ router.put('/:id', async (req, res) => {
         console.log(error);
         return res.sendStatus(400);
     }
-    let todo = await Todo.findByIdAndUpdate(req.params.id, { title: req.body.name, description: req.body.description }, { new: true });
+    let todo = await Todo.findByIdAndUpdate(req.params.id, { title: req.body.title, description: req.body.description }, { new: true });
     if (!todo) {
         return res.status(404).send('The item with the given id was not found');
     }
