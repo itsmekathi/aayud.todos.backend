@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
         return res.status(400).send(''.concat(error.details.map(ed => ed.message)));
     }
     let todo = new Todo({
-        title: req.body.name,
+        title: req.body.title,
         description: req.body.description
     });
     todo = await todo.save()
